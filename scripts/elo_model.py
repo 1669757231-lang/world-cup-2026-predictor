@@ -16,8 +16,8 @@ from typing import Dict, Tuple, Optional
 # ---------------------------------------------------------------------------
 # Constants (empirically calibrated from historical World Cup data)
 # ---------------------------------------------------------------------------
-ELO_GOAL_BASELINE = 1.0        # expected goals for equal-Elo teams (per side)
-ELO_GOAL_SCALE = 0.004         # each Elo point difference adds this many expected goals
+ELO_GOAL_BASELINE = 1.2        # xG for equal-Elo teams (calibrated for eloratings.net scale, mean ~1800)
+ELO_GOAL_SCALE = 0.0025        # xG change per Elo point difference (400 Elo ≈ 1.0 xG swing)
 HOME_ADVANTAGE_ELO = 100       # Elo equivalent of home advantage
 
 # ---------------------------------------------------------------------------
