@@ -1,0 +1,98 @@
+{
+  "tournament": "2026 FIFA World Cup",
+  "hosts": ["USA", "Canada", "Mexico"],
+  "format": "48 teams, 16 groups of 3, top 2 advance to Round of 32",
+  "last_updated": "2026-06-15",
+  "groups": {
+    "A": [
+      { "code": "USA", "name_en": "United States", "name_zh": "美国", "confederation": "CONCACAF", "elo": 1820, "fifa_rank": 11, "key_players": ["Pulisic", "McKennie", "Turner"], "market_value_m": 380 },
+      { "code": "SEN", "name_en": "Senegal", "name_zh": "塞内加尔", "confederation": "CAF", "elo": 1760, "fifa_rank": 20, "key_players": ["Mané", "Koulibaly", "Jackson"], "market_value_m": 290 },
+      { "code": "UAE", "name_en": "United Arab Emirates", "name_zh": "阿联酋", "confederation": "AFC", "elo": 1420, "fifa_rank": 67, "key_players": ["Mabkhout", "Abdulrahman"], "market_value_m": 35 }
+    ],
+    "B": [
+      { "code": "FRA", "name_en": "France", "name_zh": "法国", "confederation": "UEFA", "elo": 1980, "fifa_rank": 2, "key_players": ["Mbappé", "Tchouaméni", "Saliba"], "market_value_m": 1250 },
+      { "code": "CRC", "name_en": "Costa Rica", "name_zh": "哥斯达黎加", "confederation": "CONCACAF", "elo": 1550, "fifa_rank": 45, "key_players": ["Navas", "Campbell"], "market_value_m": 40 },
+      { "code": "IRQ", "name_en": "Iraq", "name_zh": "伊拉克", "confederation": "AFC", "elo": 1380, "fifa_rank": 70, "key_players": ["Ali", "Resan"], "market_value_m": 15 }
+    ],
+    "C": [
+      { "code": "ARG", "name_en": "Argentina", "name_zh": "阿根廷", "confederation": "CONMEBOL", "elo": 2020, "fifa_rank": 1, "key_players": ["Messi", "Álvarez", "Fernández"], "market_value_m": 980 },
+      { "code": "NGA", "name_en": "Nigeria", "name_zh": "尼日利亚", "confederation": "CAF", "elo": 1630, "fifa_rank": 31, "key_players": ["Osimhen", "Lookman", "Iwobi"], "market_value_m": 380 },
+      { "code": "NZL", "name_en": "New Zealand", "name_zh": "新西兰", "confederation": "OFC", "elo": 1320, "fifa_rank": 95, "key_players": ["Wood", "Cacace"], "market_value_m": 30 }
+    ],
+    "D": [
+      { "code": "ENG", "name_en": "England", "name_zh": "英格兰", "confederation": "UEFA", "elo": 1960, "fifa_rank": 3, "key_players": ["Kane", "Bellingham", "Foden"], "market_value_m": 1400 },
+      { "code": "EGY", "name_en": "Egypt", "name_zh": "埃及", "confederation": "CAF", "elo": 1650, "fifa_rank": 28, "key_players": ["Salah", "Marmoush", "Elneny"], "market_value_m": 200 },
+      { "code": "CHN", "name_en": "China", "name_zh": "中国", "confederation": "AFC", "elo": 1300, "fifa_rank": 85, "key_players": ["Wu Lei", "Zhang Yuning"], "market_value_m": 18 }
+    ],
+    "E": [
+      { "code": "BRA", "name_en": "Brazil", "name_zh": "巴西", "confederation": "CONMEBOL", "elo": 2000, "fifa_rank": 4, "key_players": ["Vinícius Jr.", "Rodrygo", "Alisson"], "market_value_m": 1200 },
+      { "code": "MAR", "name_en": "Morocco", "name_zh": "摩洛哥", "confederation": "CAF", "elo": 1780, "fifa_rank": 13, "key_players": ["Hakimi", "Amrabat", "En-Nesyri"], "market_value_m": 350 },
+      { "code": "CAN", "name_en": "Canada", "name_zh": "加拿大", "confederation": "CONCACAF", "elo": 1620, "fifa_rank": 35, "key_players": ["Davies", "David", "Buchanan"], "market_value_m": 250 }
+    ],
+    "F": [
+      { "code": "ESP", "name_en": "Spain", "name_zh": "西班牙", "confederation": "UEFA", "elo": 1990, "fifa_rank": 5, "key_players": ["Rodri", "Olmo", "Yamal"], "market_value_m": 1100 },
+      { "code": "KOR", "name_en": "South Korea", "name_zh": "韩国", "confederation": "AFC", "elo": 1720, "fifa_rank": 23, "key_players": ["Son", "Kim Min-jae", "Lee Kang-in"], "market_value_m": 280 },
+      { "code": "PAR", "name_en": "Paraguay", "name_zh": "巴拉圭", "confederation": "CONMEBOL", "elo": 1520, "fifa_rank": 49, "key_players": ["Almirón", "Enciso"], "market_value_m": 90 }
+    ],
+    "G": [
+      { "code": "GER", "name_en": "Germany", "name_zh": "德国", "confederation": "UEFA", "elo": 1940, "fifa_rank": 8, "key_players": ["Musiala", "Wirtz", "ter Stegen"], "market_value_m": 1050 },
+      { "code": "IRN", "name_en": "Iran", "name_zh": "伊朗", "confederation": "AFC", "elo": 1660, "fifa_rank": 27, "key_players": ["Taremi", "Azmoun", "Jahanbakhsh"], "market_value_m": 60 },
+      { "code": "JAM", "name_en": "Jamaica", "name_zh": "牙买加", "confederation": "CONCACAF", "elo": 1480, "fifa_rank": 55, "key_players": ["Bailey", "Antonio", "Gray"], "market_value_m": 120 }
+    ],
+    "H": [
+      { "code": "POR", "name_en": "Portugal", "name_zh": "葡萄牙", "confederation": "UEFA", "elo": 1950, "fifa_rank": 6, "key_players": ["Ronaldo", "Fernandes", "Leão"], "market_value_m": 950 },
+      { "code": "CIV", "name_en": "Ivory Coast", "name_zh": "科特迪瓦", "confederation": "CAF", "elo": 1640, "fifa_rank": 32, "key_players": ["Haller", "Adingra", "Kessié"], "market_value_m": 240 },
+      { "code": "AUS", "name_en": "Australia", "name_zh": "澳大利亚", "confederation": "AFC", "elo": 1580, "fifa_rank": 31, "key_players": ["Souttar", "Irvine", "Boyle"], "market_value_m": 60 }
+    ],
+    "I": [
+      { "code": "NED", "name_en": "Netherlands", "name_zh": "荷兰", "confederation": "UEFA", "elo": 1900, "fifa_rank": 9, "key_players": ["van Dijk", "Gakpo", "de Jong"], "market_value_m": 800 },
+      { "code": "TUN", "name_en": "Tunisia", "name_zh": "突尼斯", "confederation": "CAF", "elo": 1570, "fifa_rank": 42, "key_players": ["Msakni", "Talbi", "Slimane"], "market_value_m": 45 },
+      { "code": "QAT", "name_en": "Qatar", "name_zh": "卡塔尔", "confederation": "AFC", "elo": 1500, "fifa_rank": 50, "key_players": ["Afif", "Ali", "Al-Haydos"], "market_value_m": 30 }
+    ],
+    "J": [
+      { "code": "ITA", "name_en": "Italy", "name_zh": "意大利", "confederation": "UEFA", "elo": 1920, "fifa_rank": 10, "key_players": ["Donnarumma", "Barella", "Chiesa"], "market_value_m": 750 },
+      { "code": "URU", "name_en": "Uruguay", "name_zh": "乌拉圭", "confederation": "CONMEBOL", "elo": 1800, "fifa_rank": 14, "key_players": ["Valverde", "Núñez", "Araújo"], "market_value_m": 420 },
+      { "code": "CPV", "name_en": "Cape Verde", "name_zh": "佛得角", "confederation": "CAF", "elo": 1500, "fifa_rank": 58, "key_players": ["Ryan Mendes", "Jovane Cabral", "Bebé", "Logan Costa"], "market_value_m": 45 }
+    ],
+    "K": [
+      { "code": "BEL", "name_en": "Belgium", "name_zh": "比利时", "confederation": "UEFA", "elo": 1860, "fifa_rank": 7, "key_players": ["De Bruyne", "Lukaku", "Doku"], "market_value_m": 600 },
+      { "code": "CRO", "name_en": "Croatia", "name_zh": "克罗地亚", "confederation": "UEFA", "elo": 1850, "fifa_rank": 12, "key_players": ["Modrić", "Gvardiol", "Kovačić"], "market_value_m": 380 },
+      { "code": "GHA", "name_en": "Ghana", "name_zh": "加纳", "confederation": "CAF", "elo": 1600, "fifa_rank": 38, "key_players": ["Kudus", "Partey", "J. Ayew"], "market_value_m": 200 }
+    ],
+    "L": [
+      { "code": "COL", "name_en": "Colombia", "name_zh": "哥伦比亚", "confederation": "CONMEBOL", "elo": 1830, "fifa_rank": 15, "key_players": ["Díaz", "Rodríguez", "Durán"], "market_value_m": 350 },
+      { "code": "DEN", "name_en": "Denmark", "name_zh": "丹麦", "confederation": "UEFA", "elo": 1810, "fifa_rank": 17, "key_players": ["Højbjerg", "Eriksen", "Højlund"], "market_value_m": 340 },
+      { "code": "CHI", "name_en": "Chile", "name_zh": "智利", "confederation": "CONMEBOL", "elo": 1560, "fifa_rank": 43, "key_players": ["Brereton", "Osorio", "Sánchez"], "market_value_m": 85 }
+    ],
+    "M": [
+      { "code": "MEX", "name_en": "Mexico", "name_zh": "墨西哥", "confederation": "CONCACAF", "elo": 1750, "fifa_rank": 19, "key_players": ["Álvarez", "Giménez", "Lozano"], "market_value_m": 280 },
+      { "code": "SUI", "name_en": "Switzerland", "name_zh": "瑞士", "confederation": "UEFA", "elo": 1800, "fifa_rank": 16, "key_players": ["Akanji", "Embolo", "Xhaka"], "market_value_m": 300 },
+      { "code": "JPN", "name_en": "Japan", "name_zh": "日本", "confederation": "AFC", "elo": 1780, "fifa_rank": 18, "key_players": ["Mitoma", "Kubo", "Endo"], "market_value_m": 350 }
+    ],
+    "N": [
+      { "code": "ECU", "name_en": "Ecuador", "name_zh": "厄瓜多尔", "confederation": "CONMEBOL", "elo": 1700, "fifa_rank": 24, "key_players": ["Caicedo", "Estupiñán", "Valencia"], "market_value_m": 250 },
+      { "code": "SRB", "name_en": "Serbia", "name_zh": "塞尔维亚", "confederation": "UEFA", "elo": 1720, "fifa_rank": 22, "key_players": ["Mitrović", "Vlahović", "Milinković-Savić"], "market_value_m": 330 },
+      { "code": "ALG", "name_en": "Algeria", "name_zh": "阿尔及利亚", "confederation": "CAF", "elo": 1620, "fifa_rank": 34, "key_players": ["Mahrez", "Bennacer", "Bounedjah"], "market_value_m": 180 }
+    ],
+    "O": [
+      { "code": "AUT", "name_en": "Austria", "name_zh": "奥地利", "confederation": "UEFA", "elo": 1760, "fifa_rank": 21, "key_players": ["Alaba", "Sabitzer", "Baumgartner"], "market_value_m": 320 },
+      { "code": "UKR", "name_en": "Ukraine", "name_zh": "乌克兰", "confederation": "UEFA", "elo": 1740, "fifa_rank": 25, "key_players": ["Zinchenko", "Mudryk", "Dovbyk"], "market_value_m": 280 },
+      { "code": "KUW", "name_en": "Kuwait", "name_zh": "科威特", "confederation": "AFC", "elo": 1260, "fifa_rank": 110, "key_players": ["Al-Enezi", "Al-Rashidi"], "market_value_m": 5 }
+    ],
+    "P": [
+      { "code": "SWE", "name_en": "Sweden", "name_zh": "瑞典", "confederation": "UEFA", "elo": 1730, "fifa_rank": 26, "key_players": ["Gyökeres", "Isak", "Kulusevski"], "market_value_m": 350 },
+      { "code": "PER", "name_en": "Peru", "name_zh": "秘鲁", "confederation": "CONMEBOL", "elo": 1600, "fifa_rank": 37, "key_players": ["Lapadula", "Advíncula", "Carrillo"], "market_value_m": 55 },
+      { "code": "CMR", "name_en": "Cameroon", "name_zh": "喀麦隆", "confederation": "CAF", "elo": 1580, "fifa_rank": 40, "key_players": ["Onana", "Aboubakar", "Mbeumo"], "market_value_m": 180 }
+    ]
+  },
+  "elo_k_factor": 32,
+  "home_advantage_elo": 100,
+  "confederation_home_bonus": {
+    "CONCACAF": 50,
+    "CONMEBOL": 0,
+    "UEFA": 0,
+    "AFC": 0,
+    "CAF": 0,
+    "OFC": 0
+  }
+}

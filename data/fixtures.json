@@ -1,0 +1,98 @@
+{
+  "group_stage": [
+    {"match_id": 1,  "group": "A", "home": "USA", "away": "SEN", "date": "2026-06-11", "venue": "Los Angeles"},
+    {"match_id": 2,  "group": "A", "home": "USA", "away": "UAE", "date": "2026-06-16", "venue": "Seattle"},
+    {"match_id": 3,  "group": "A", "home": "SEN", "away": "UAE", "date": "2026-06-21", "venue": "San Francisco"},
+    {"match_id": 4,  "group": "B", "home": "FRA", "away": "CRC", "date": "2026-06-11", "venue": "Houston"},
+    {"match_id": 5,  "group": "B", "home": "FRA", "away": "IRQ", "date": "2026-06-16", "venue": "Dallas"},
+    {"match_id": 6,  "group": "B", "home": "CRC", "away": "IRQ", "date": "2026-06-21", "venue": "Atlanta"},
+    {"match_id": 7,  "group": "C", "home": "ARG", "away": "NGA", "date": "2026-06-12", "venue": "Miami"},
+    {"match_id": 8,  "group": "C", "home": "ARG", "away": "NZL", "date": "2026-06-17", "venue": "Orlando"},
+    {"match_id": 9,  "group": "C", "home": "NGA", "away": "NZL", "date": "2026-06-22", "venue": "Charlotte"},
+    {"match_id": 10, "group": "D", "home": "ENG", "away": "EGY", "date": "2026-06-12", "venue": "New York"},
+    {"match_id": 11, "group": "D", "home": "ENG", "away": "CHN", "date": "2026-06-17", "venue": "Philadelphia"},
+    {"match_id": 12, "group": "D", "home": "EGY", "away": "CHN", "date": "2026-06-22", "venue": "Boston"},
+    {"match_id": 13, "group": "E", "home": "BRA", "away": "MAR", "date": "2026-06-12", "venue": "Vancouver"},
+    {"match_id": 14, "group": "E", "home": "BRA", "away": "CAN", "date": "2026-06-17", "venue": "Toronto"},
+    {"match_id": 15, "group": "E", "home": "MAR", "away": "CAN", "date": "2026-06-22", "venue": "Montreal"},
+    {"match_id": 16, "group": "F", "home": "ESP", "away": "KOR", "date": "2026-06-13", "venue": "Kansas City"},
+    {"match_id": 17, "group": "F", "home": "ESP", "away": "PAR", "date": "2026-06-18", "venue": "Denver"},
+    {"match_id": 18, "group": "F", "home": "KOR", "away": "PAR", "date": "2026-06-23", "venue": "Las Vegas"},
+    {"match_id": 19, "group": "G", "home": "GER", "away": "IRN", "date": "2026-06-13", "venue": "Mexico City"},
+    {"match_id": 20, "group": "G", "home": "GER", "away": "JAM", "date": "2026-06-18", "venue": "Guadalajara"},
+    {"match_id": 21, "group": "G", "home": "IRN", "away": "JAM", "date": "2026-06-23", "venue": "Monterrey"},
+    {"match_id": 22, "group": "H", "home": "POR", "away": "CIV", "date": "2026-06-13", "venue": "San José"},
+    {"match_id": 23, "group": "H", "home": "POR", "away": "AUS", "date": "2026-06-18", "venue": "Pasadena"},
+    {"match_id": 24, "group": "H", "home": "CIV", "away": "AUS", "date": "2026-06-23", "venue": "Arlington"},
+    {"match_id": 25, "group": "I", "home": "NED", "away": "TUN", "date": "2026-06-14", "venue": "Miami"},
+    {"match_id": 26, "group": "I", "home": "NED", "away": "QAT", "date": "2026-06-19", "venue": "Orlando"},
+    {"match_id": 27, "group": "I", "home": "TUN", "away": "QAT", "date": "2026-06-24", "venue": "Charlotte"},
+    {"match_id": 28, "group": "J", "home": "ITA", "away": "URU", "date": "2026-06-14", "venue": "Houston"},
+    {"match_id": 29, "group": "J", "home": "ITA", "away": "RSA", "date": "2026-06-19", "venue": "Atlanta"},
+    {"match_id": 30, "group": "J", "home": "URU", "away": "RSA", "date": "2026-06-24", "venue": "Dallas"},
+    {"match_id": 31, "group": "K", "home": "BEL", "away": "CRO", "date": "2026-06-14", "venue": "Vancouver"},
+    {"match_id": 32, "group": "K", "home": "BEL", "away": "GHA", "date": "2026-06-19", "venue": "Toronto"},
+    {"match_id": 33, "group": "K", "home": "CRO", "away": "GHA", "date": "2026-06-24", "venue": "Seattle"},
+    {"match_id": 34, "group": "L", "home": "COL", "away": "DEN", "date": "2026-06-15", "venue": "San Francisco"},
+    {"match_id": 35, "group": "L", "home": "COL", "away": "CHI", "date": "2026-06-20", "venue": "Los Angeles"},
+    {"match_id": 36, "group": "L", "home": "DEN", "away": "CHI", "date": "2026-06-25", "venue": "San José"},
+    {"match_id": 37, "group": "M", "home": "MEX", "away": "SUI", "date": "2026-06-15", "venue": "Mexico City"},
+    {"match_id": 38, "group": "M", "home": "MEX", "away": "JPN", "date": "2026-06-20", "venue": "Guadalajara"},
+    {"match_id": 39, "group": "M", "home": "SUI", "away": "JPN", "date": "2026-06-25", "venue": "Monterrey"},
+    {"match_id": 40, "group": "N", "home": "ECU", "away": "SRB", "date": "2026-06-15", "venue": "New York"},
+    {"match_id": 41, "group": "N", "home": "ECU", "away": "ALG", "date": "2026-06-20", "venue": "Philadelphia"},
+    {"match_id": 42, "group": "N", "home": "SRB", "away": "ALG", "date": "2026-06-25", "venue": "Boston"},
+    {"match_id": 43, "group": "O", "home": "AUT", "away": "UKR", "date": "2026-06-15", "venue": "Kansas City"},
+    {"match_id": 44, "group": "O", "home": "AUT", "away": "KUW", "date": "2026-06-20", "venue": "Denver"},
+    {"match_id": 45, "group": "O", "home": "UKR", "away": "KUW", "date": "2026-06-25", "venue": "Las Vegas"},
+    {"match_id": 46, "group": "P", "home": "SWE", "away": "PER", "date": "2026-06-16", "venue": "Pasadena"},
+    {"match_id": 47, "group": "P", "home": "SWE", "away": "CMR", "date": "2026-06-20", "venue": "Arlington"},
+    {"match_id": 48, "group": "P", "home": "PER", "away": "CMR", "date": "2026-06-25", "venue": "East Rutherford"}
+  ],
+  "knockout_stage": [
+    {"round": "Round of 32", "matches": [
+      {"match_id": 49, "home": null, "away": null, "date": "2026-06-28", "venue": "Los Angeles", "desc": "1A vs 2B"},
+      {"match_id": 50, "home": null, "away": null, "date": "2026-06-28", "venue": "Houston", "desc": "1C vs 2D"},
+      {"match_id": 51, "home": null, "away": null, "date": "2026-06-29", "venue": "Miami", "desc": "1E vs 2F"},
+      {"match_id": 52, "home": null, "away": null, "date": "2026-06-29", "venue": "New York", "desc": "1G vs 2H"},
+      {"match_id": 53, "home": null, "away": null, "date": "2026-06-30", "venue": "Vancouver", "desc": "1I vs 2J"},
+      {"match_id": 54, "home": null, "away": null, "date": "2026-06-30", "venue": "Mexico City", "desc": "1K vs 2L"},
+      {"match_id": 55, "home": null, "away": null, "date": "2026-07-01", "venue": "Kansas City", "desc": "1M vs 2N"},
+      {"match_id": 56, "home": null, "away": null, "date": "2026-07-01", "venue": "San Francisco", "desc": "1O vs 2P"},
+      {"match_id": 57, "home": null, "away": null, "date": "2026-07-02", "venue": "Dallas", "desc": "1B vs 2A"},
+      {"match_id": 58, "home": null, "away": null, "date": "2026-07-02", "venue": "Atlanta", "desc": "1D vs 2C"},
+      {"match_id": 59, "home": null, "away": null, "date": "2026-07-03", "venue": "Philadelphia", "desc": "1F vs 2E"},
+      {"match_id": 60, "home": null, "away": null, "date": "2026-07-03", "venue": "Orlando", "desc": "1H vs 2G"},
+      {"match_id": 61, "home": null, "away": null, "date": "2026-07-04", "venue": "Toronto", "desc": "1J vs 2I"},
+      {"match_id": 62, "home": null, "away": null, "date": "2026-07-04", "venue": "Seattle", "desc": "1L vs 2K"},
+      {"match_id": 63, "home": null, "away": null, "date": "2026-07-05", "venue": "Denver", "desc": "1N vs 2M"},
+      {"match_id": 64, "home": null, "away": null, "date": "2026-07-05", "venue": "Boston", "desc": "1P vs 2O"}
+    ]},
+    {"round": "Round of 16", "matches": [
+      {"match_id": 65, "home": null, "away": null, "date": "2026-07-07", "venue": "Los Angeles"},
+      {"match_id": 66, "home": null, "away": null, "date": "2026-07-07", "venue": "Houston"},
+      {"match_id": 67, "home": null, "away": null, "date": "2026-07-08", "venue": "Miami"},
+      {"match_id": 68, "home": null, "away": null, "date": "2026-07-08", "venue": "New York"},
+      {"match_id": 69, "home": null, "away": null, "date": "2026-07-09", "venue": "Vancouver"},
+      {"match_id": 70, "home": null, "away": null, "date": "2026-07-09", "venue": "Mexico City"},
+      {"match_id": 71, "home": null, "away": null, "date": "2026-07-10", "venue": "Dallas"},
+      {"match_id": 72, "home": null, "away": null, "date": "2026-07-10", "venue": "Atlanta"}
+    ]},
+    {"round": "Quarter-finals", "matches": [
+      {"match_id": 73, "home": null, "away": null, "date": "2026-07-11", "venue": "Los Angeles"},
+      {"match_id": 74, "home": null, "away": null, "date": "2026-07-11", "venue": "New York"},
+      {"match_id": 75, "home": null, "away": null, "date": "2026-07-12", "venue": "Miami"},
+      {"match_id": 76, "home": null, "away": null, "date": "2026-07-12", "venue": "Vancouver"}
+    ]},
+    {"round": "Semi-finals", "matches": [
+      {"match_id": 77, "home": null, "away": null, "date": "2026-07-14", "venue": "Dallas"},
+      {"match_id": 78, "home": null, "away": null, "date": "2026-07-15", "venue": "Atlanta"}
+    ]},
+    {"round": "Third Place", "matches": [
+      {"match_id": 79, "home": null, "away": null, "date": "2026-07-18", "venue": "Miami"}
+    ]},
+    {"round": "Final", "matches": [
+      {"match_id": 80, "home": null, "away": null, "date": "2026-07-19", "venue": "New York"}
+    ]}
+  ]
+}
