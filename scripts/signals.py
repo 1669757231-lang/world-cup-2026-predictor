@@ -4,9 +4,9 @@ World Cup 2026 — Dynamic Signal Layer
 All signals that adjust Elo ratings BEFORE they enter the Poisson engine.
 
 Signal sources:
-  1. Injuries / squad changes — key player missing → Elo penalty
-  2. Recent form — last 5 matches weighted Elo adjustment
-  3. Reddit community sentiment — NLP score → small Elo modifier
+  1. Twitter/X analysis — real football journalist sentiment via TikHub
+  2. Twitter/X injuries — real-time injury news from Twitter
+  3. Recent form — last 5 matches weighted Elo adjustment
   4. Betting market — odds-implied probability as calibration signal
   5. Home / confederation advantage — host nation & regional boost
   6. Market value depth — squad depth indicator for tournament endurance
@@ -14,6 +14,9 @@ Signal sources:
 Design: each signal is a PLUGGABLE function that takes a team dict and returns
 an Elo delta. The main `apply_all_signals()` aggregates them and returns
 adjusted Elo ratings for all teams.
+
+Data flow:
+  fetch_twitter.py → data/twitter_data.json → signals.py (this file)
 """
 
 import json
@@ -27,6 +30,37 @@ from dataclasses import dataclass, field
 # Fix Windows console encoding
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+# ---------------------------------------------------------------------------
+# Load cached Twitter data (populated by fetch_twitter.py)
+# ---------------------------------------------------------------------------
+
+DATA_DIR = Path(__file__).parent.parent / "data"
+TWITTER_DATA_PATH = DATA_DIR / "twitter_data.json"
+
+_twitter_cache: dict = {}
+_twitter_loaded: bool = False
+
+
+def _load_twitter_data() -> dict:
+    """Load Twitter data from cache, with lazy init."""
+    global _twitter_cache, _twitter_loaded
+    if not _twitter_loaded:
+        if TWITTER_DATA_PATH.exists():
+            try:
+                with open(TWITTER_DATA_PATH, "r", encoding="utf-8") as f:
+                    _twitter_cache = json.load(f)
+            except (json.JSONDecodeError, IOError):
+                _twitter_cache = {}
+        _twitter_loaded = True
+    return _twitter_cache
+
+
+def get_twitter_team_data(team_code: str) -> dict:
+    """Get cached Twitter data for a specific team."""
+    data = _load_twitter_data()
+    teams = data.get("teams", {})
+    return teams.get(team_code, {})
 
 # ---------------------------------------------------------------------------
 # Data structures
@@ -130,33 +164,83 @@ def recent_form_signal(team: dict) -> SignalResult:
 
 
 # ---------------------------------------------------------------------------
-# 3. Reddit Sentiment Signal
+# 3. Twitter/X Analysis Signal (replaces Reddit)
 # ---------------------------------------------------------------------------
 
-# This would be populated by crawl_reddit.py scraping r/soccer, r/worldcup
-# Format: {team_code: {"sentiment_score": -1.0 to 1.0, "volume": post_count, "topics": [...]}}
-REDDIT_SENTIMENT: Dict[str, dict] = {}
+# Data comes from data/twitter_data.json (populated by fetch_twitter.py)
+# Each team has: strength_score, confidence, tweet_volume, injuries, top_topics, key_quotes
 
-SENTIMENT_MAX_ELO = 15    # Max Elo adjustment from Reddit (intentionally small)
+TWITTER_SENTIMENT_MAX_ELO = 25    # Twitter carries more weight than Reddit (real journalists)
+TWITTER_MIN_CONFIDENCE = 0.15     # Minimum confidence to apply signal
 
 
-def reddit_sentiment_signal(team: dict) -> SignalResult:
-    """Apply Reddit community sentiment as a small Elo modifier."""
+def twitter_analysis_signal(team: dict) -> SignalResult:
+    """Apply real Twitter/X football analysis sentiment as Elo modifier.
+
+    Data sourced from football journalists, analysts, and official accounts
+    via TikHub Twitter API. Higher confidence than Reddit.
+    """
     code = team["code"]
-    if code not in REDDIT_SENTIMENT:
-        return SignalResult(code, "reddit", 0.0, "no Reddit data")
+    td = get_twitter_team_data(code)
 
-    data = REDDIT_SENTIMENT[code]
-    score = data.get("sentiment_score", 0.0)
-    volume = data.get("volume", 0)
+    if not td:
+        return SignalResult(code, "twitter", 0.0, "no Twitter data yet (run fetch_twitter.py)")
 
-    # Confidence scales with volume (more posts = more reliable)
-    volume_factor = min(1.0, math.log2(volume + 1) / 8) if volume > 0 else 0.3
-    delta = score * SENTIMENT_MAX_ELO * volume_factor
+    score = td.get("strength_score", 0.0)
+    confidence = td.get("confidence", 0.0)
+    volume = td.get("tweet_volume", 0)
 
-    mood = "bullish" if score > 0.3 else ("bearish" if score < -0.3 else "neutral")
-    return SignalResult(code, "reddit", round(delta, 1),
-                        f"Reddit {mood} (score={score:.2f}, vol={volume})")
+    if confidence < TWITTER_MIN_CONFIDENCE:
+        return SignalResult(code, "twitter", 0.0,
+                            f"low confidence ({confidence:.1%}), vol={volume}")
+
+    delta = score * TWITTER_SENTIMENT_MAX_ELO * confidence
+
+    mood = "bullish" if score > 0.2 else ("bearish" if score < -0.2 else "neutral")
+    return SignalResult(code, "twitter", round(delta, 1),
+                        f"Twitter {mood} (score={score:.2f}, conf={confidence:.0%}, vol={volume})")
+
+
+# ---------------------------------------------------------------------------
+# 3b. Twitter Injury Signal
+# ---------------------------------------------------------------------------
+
+TWITTER_INJURY_PENALTY = 15   # Elo penalty per injury mention from Twitter
+
+
+def twitter_injury_signal(team: dict) -> SignalResult:
+    """Apply Elo penalty based on injury reports found on Twitter/X.
+
+    Each injury mention from a credible source reduces Elo by TWITTER_INJURY_PENALTY.
+    Multiple mentions of same player are deduplicated.
+    """
+    code = team["code"]
+    td = get_twitter_team_data(code)
+
+    if not td:
+        return SignalResult(code, "injury_tw", 0.0, "no Twitter data")
+
+    injuries = td.get("injuries", [])
+    if not injuries:
+        return SignalResult(code, "injury_tw", 0.0, "no injuries reported on Twitter")
+
+    # Deduplicate by player name
+    unique_players = {}
+    for inj in injuries:
+        player = inj.get("player", "unknown")
+        if player != "unknown" and player not in unique_players:
+            unique_players[player] = inj
+
+    if not unique_players:
+        return SignalResult(code, "injury_tw", 0.0, "no specific players identified")
+
+    total_penalty = len(unique_players) * TWITTER_INJURY_PENALTY
+    # Cap the penalty
+    total_penalty = min(total_penalty, 60)
+
+    player_names = ", ".join(list(unique_players.keys())[:4])
+    return SignalResult(code, "injury_tw", -total_penalty,
+                        f"Twitter reports: {player_names} may be injured/out (-{total_penalty})")
 
 
 # ---------------------------------------------------------------------------
@@ -241,9 +325,9 @@ def squad_depth_signal(team: dict) -> SignalResult:
 
 # All active signals (add/remove to customize the model)
 SIGNAL_REGISTRY: List[Callable] = [
-    injury_signal,
+    twitter_analysis_signal,
+    twitter_injury_signal,
     recent_form_signal,
-    reddit_sentiment_signal,
     betting_market_signal,
     host_advantage_signal,
     squad_depth_signal,
@@ -347,8 +431,8 @@ def clear_all_signals():
     """Reset all signal data."""
     INJURY_DB.clear()
     RECENT_FORM.clear()
-    REDDIT_SENTIMENT.clear()
     BETTING_IMPLIED.clear()
+    # Note: Twitter data is managed by fetch_twitter.py, not cleared here
 
 
 # ===================================================================
@@ -360,12 +444,17 @@ if __name__ == "__main__":
     with open(data_dir / "teams.json", "r", encoding="utf-8") as f:
         teams = json.load(f)
 
-    # Inject some demo signals
-    set_injury("ARG", "Messi", -40)
-    set_injury("FRA", "Mbappé", -35)
+    # Demo: load real Twitter data if available, fall back to basic signals
+    tw_data = _load_twitter_data()
+    if tw_data:
+        teams_with_data = len(tw_data.get("teams", {}))
+        print(f"📡 Loaded Twitter data for {teams_with_data} teams "
+              f"(updated: {tw_data.get('last_updated', 'unknown')[:19]})")
+    else:
+        print("⚠️  No Twitter data yet. Run: python scripts/fetch_twitter.py")
+
+    # Inject some demo form data
     set_recent_form("ENG", [("GER", 3, 0, 1.0), ("ITA", 2, 1, 0.85), ("FRA", 1, 1, 0.7)])
-    set_reddit_sentiment("BRA", 0.7, 500, ["favorites", "Vini Jr", "attack"])
-    set_reddit_sentiment("GER", -0.3, 300, ["rebuilding", "goalkeeper concerns"])
 
     # Apply all signals
     adjusted = apply_all_signals(teams, verbose=True)
