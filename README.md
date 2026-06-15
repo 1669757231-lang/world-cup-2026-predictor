@@ -3,8 +3,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 
-> **Elo + Poisson + Monte Carlo + Community Sentiment** — A data-driven, open-source World Cup prediction engine.
-> 数据驱动的开源世界杯预测引擎，融合 Elo 评分、泊松分布、蒙特卡洛模拟和社区情绪分析。
+> **Real Elo + Poisson + Monte Carlo + Twitter/X Analysis** — A data-driven, open-source World Cup prediction engine with real eloratings.net data.
+> 数据驱动的开源世界杯预测引擎，融合真实 Elo 评分（eloratings.net）、泊松分布、蒙特卡洛模拟和 Twitter/X 足球分析。
 
 ---
 
@@ -249,12 +249,11 @@ predict.py  ──►  signals.py  ──►  elo_model.py
 
 | Source | What | Status |
 |--------|------|--------|
-| **teams.json** | Base Elo ratings, squads, market values | ✅ Included |
-| **fixtures.json** | Match schedule (80 matches) | ✅ Included |
-| **Reddit** | r/soccer, r/worldcup sentiment | 🔌 Pluggable (PRAW) |
-| **FIFA Rankings** | Official FIFA rankings | 🔜 Planned |
-| **Transfermarkt** | Player market values | ✅ In teams.json |
-| **Betting Odds** | Odds-implied probabilities | 🔌 Pluggable |
+| **eloratings.net** | Real World Football Elo ratings (all 48 teams) | ✅ Real |
+| **Twitter/X (TikHub)** | Football journalist analysis, injury news | ✅ Real-time |
+| **FIFA** | Official group draw & match schedule | ✅ Official |
+| **Transfermarkt** | Squad market values | ✅ Included |
+| **fixtures.json** | 104 matches (72 group + 32 knockout) | ✅ Official |
 
 ---
 
@@ -281,7 +280,7 @@ python scripts/predict.py match BRA GER  # quick sanity check
 
 MIT — see [LICENSE](LICENSE) for details.
 
-**Note on data:** `teams.json` and `fixtures.json` are compiled from public sources. Elo ratings are computed, not official FIFA data.
+**Note on data:** Elo ratings sourced from [eloratings.net](https://eloratings.net) (World Football Elo Ratings). Fixtures from FIFA official schedule. Twitter data via TikHub API.
 
 ---
 
