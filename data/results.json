@@ -1,0 +1,19 @@
+{
+  "matches": [
+    {
+      "match_id": 43,
+      "group": "H",
+      "home": "ESP",
+      "away": "CPV",
+      "home_goals": 0,
+      "away_goals": 0,
+      "date": "2026-06-15",
+      "venue": "Atlanta",
+      "round": 1
+    }
+  ],
+  "elo_after": {
+    "ESP": 2156,
+    "CPV": 1591
+  }
+}

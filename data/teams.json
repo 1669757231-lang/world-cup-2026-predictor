@@ -48,10 +48,10 @@
       { "code": "NZL", "name_en": "New Zealand", "name_zh": "新西兰", "confederation": "OFC", "elo": 1520, "fifa_rank": 85, "key_players": ["Wood", "Cacace"], "market_value_m": 30 }
     ],
     "H": [
-      { "code": "ESP", "name_en": "Spain", "name_zh": "西班牙", "confederation": "UEFA", "elo": 2171, "fifa_rank": 2, "key_players": ["Rodri", "Olmo", "Yamal"], "market_value_m": 1100 },
+      { "code": "ESP", "name_en": "Spain", "name_zh": "西班牙", "confederation": "UEFA", "elo": 2156, "fifa_rank": 2, "key_players": ["Rodri", "Olmo", "Yamal"], "market_value_m": 1100 },
       { "code": "URU", "name_en": "Uruguay", "name_zh": "乌拉圭", "confederation": "CONMEBOL", "elo": 1890, "fifa_rank": 16, "key_players": ["Valverde", "Núñez", "Araújo"], "market_value_m": 420 },
       { "code": "KSA", "name_en": "Saudi Arabia", "name_zh": "沙特阿拉伯", "confederation": "AFC", "elo": 1600, "fifa_rank": 61, "key_players": ["Al-Dawsari", "Al-Shehri", "Kanno"], "market_value_m": 35 },
-      { "code": "CPV", "name_en": "Cape Verde", "name_zh": "佛得角", "confederation": "CAF", "elo": 1576, "fifa_rank": 67, "key_players": ["Ryan Mendes", "Jovane Cabral", "Bebé", "Logan Costa"], "market_value_m": 45 }
+      { "code": "CPV", "name_en": "Cape Verde", "name_zh": "佛得角", "confederation": "CAF", "elo": 1591, "fifa_rank": 67, "key_players": ["Ryan Mendes", "Jovane Cabral", "Bebé", "Logan Costa"], "market_value_m": 45 }
     ],
     "I": [
       { "code": "FRA", "name_en": "France", "name_zh": "法国", "confederation": "UEFA", "elo": 2063, "fifa_rank": 3, "key_players": ["Mbappé", "Tchouaméni", "Saliba"], "market_value_m": 1250 },
